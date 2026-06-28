@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="الشركة الألمانية لمكافحة الحشرات والقوارض - خدمات مكافحة الحشرات والتعقيم الفاخرة للفنادق، المستشفيات، القصور، والمنشآت التجارية.">
+  <title>الشركة الألمانية لمكافحة الحشرات والقوارض</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              deep: '#14532D',
+              emerald: '#16A34A',
+              charcoal: '#111111',
+              darkgray: '#1E293B',
+              light: '#F8FAFC',
+              gold: '#D97706'
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'Cairo', 'sans-serif'],
+            arabic: ['Cairo', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Style Layer -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-light text-brand-charcoal overflow-x-hidden antialiased">
+
+  <!-- --- Sticky Navbar --- -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse">
+        <img src="assets/logo.jpg" alt="Logo" class="w-12 h-12 object-contain rounded-lg shadow-md border border-white/20">
+        <span class="text-sm md:text-base font-bold tracking-tight text-white drop-shadow-md leading-tight">
+          <span class="lang-ar block">الشركة الألمانية<br><span class="text-[10px] md:text-xs font-semibold text-white/80">لمكافحة الحشرات والقوارض</span></span>
+          <span class="lang-en block">German Company<br><span class="text-[10px] md:text-xs font-semibold text-white/80">for Pest Control</span></span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 rtl:space-x-reverse bg-white/10 backdrop-blur-md border border-white/15 px-8 py-2.5 rounded-full">
+        <a href="#about" class="text-sm font-semibold text-white/90 hover:text-brand-emerald transition-colors">
+          <span class="lang-ar">من نحن</span><span class="lang-en">About Us</span>
+        </a>
+        <a href="#services" class="text-sm font-semibold text-white/90 hover:text-brand-emerald transition-colors">
+          <span class="lang-ar">خدماتنا</span><span class="lang-en">Services</span>
+        </a>
+        <a href="#work" class="text-sm font-semibold text-white/90 hover:text-brand-emerald transition-colors">
+          <span class="lang-ar">كيف نعمل</span><span class="lang-en">Process</span>
+        </a>
+        <a href="#comparison" class="text-sm font-semibold text-white/90 hover:text-brand-emerald transition-colors">
+          <span class="lang-ar">قبل وبعد</span><span class="lang-en">Before/After</span>
+        </a>
+        <a href="#faq" class="text-sm font-semibold text-white/90 hover:text-brand-emerald transition-colors">
+          <span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span>
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Language Switcher -->
+      <div class="hidden md:flex items-center space-x-4 rtl:space-x-reverse">
+        <button id="lang-toggle" class="px-4 py-2 border border-white/30 text-white hover:border-brand-emerald hover:text-brand-emerald text-xs font-bold rounded-lg transition-all">
+          English
+        </button>
+        <a href="#contact" class="glow-btn bg-brand-emerald text-white font-bold text-sm px-6 py-2.5 rounded-lg shadow-lg shadow-brand-emerald/20 hover:bg-brand-emerald/90 transition-all">
+          <span class="lang-ar">احجز موعداً</span><span class="lang-en">Book Service</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mx-6 mt-2 bg-brand-charcoal/95 border border-white/10 rounded-2xl flex-col p-6 space-y-4 shadow-xl z-50 backdrop-blur-lg">
+      <a href="#about" class="text-white hover:text-brand-emerald font-semibold text-sm">
+        <span class="lang-ar">من نحن</span><span class="lang-en">About Us</span>
+      </a>
+      <a href="#services" class="text-white hover:text-brand-emerald font-semibold text-sm">
+        <span class="lang-ar">خدماتنا</span><span class="lang-en">Services</span>
+      </a>
+      <a href="#work" class="text-white hover:text-brand-emerald font-semibold text-sm">
+        <span class="lang-ar">كيف نعمل</span><span class="lang-en">Process</span>
+      </a>
+      <a href="#comparison" class="text-white hover:text-brand-emerald font-semibold text-sm">
+        <span class="lang-ar">قبل وبعد</span><span class="lang-en">Before/After</span>
+      </a>
+      <a href="#faq" class="text-white hover:text-brand-emerald font-semibold text-sm">
+        <span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span>
+      </a>
+      <hr class="border-white/10 my-2">
+      <div class="flex flex-col space-y-3">
+        <button id="lang-toggle-mobile" class="w-full py-2.5 border border-white/20 text-white rounded-xl hover:border-brand-emerald text-sm font-bold transition-all">
+          English
+        </button>
+        <a href="#contact" class="w-full text-center py-2.5 bg-brand-emerald text-white font-bold text-sm rounded-xl shadow-lg">
+          <span class="lang-ar">احجز موعداً</span><span class="lang-en">Book Service</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- --- 1. HERO SECTION --- -->
+  <section class="relative h-screen flex items-center justify-center hero-bg-wrapper bg-cover bg-center overflow-hidden">
+    <!-- Gradient Dark Overlay -->
+    <div class="absolute inset-0 hero-gradient-overlay z-10"></div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 pt-20">
+      
+      <!-- Headline & Subheadline Callouts -->
+      <div class="lg:col-span-8 flex flex-col justify-center text-white text-right rtl:text-right ltr:text-left">
+        <!-- Badge -->
+        <div class="inline-flex items-center space-x-2 rtl:space-x-reverse bg-brand-emerald/20 border border-brand-emerald/40 text-brand-emerald px-4 py-1.5 rounded-full text-xs font-bold w-fit mb-6 floating-element self-start">
+          <span class="w-2 h-2 rounded-full bg-brand-emerald animate-ping"></span>
+          <span class="lang-ar">معتمدون من وزارة الصحة المصرية</span>
+          <span class="lang-en">Ministry of Health Certified</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+          <span class="lang-ar text-white">احمِ منزلك من الحشرات قبل أن تتحول إلى كارثة</span>
+          <span class="lang-en text-white">Protect Your space from Pests Before disaster strikes</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-white/80 max-w-2xl mb-8 leading-relaxed">
+          <span class="lang-ar">نقدم خدمات مكافحة الآفات والتعقيم الاحترافية باستخدام أحدث الوسائل التكنولوجية والحلول الآمنة والمعتمدة دولياً لحماية عائلتك وأعمالك.</span>
+          <span class="lang-en">Professional pest control services using safe, certified solutions designed to safeguard your home, business, and healthcare environment.</span>
+        </p>
+
+        <!-- Call to Actions -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 rtl:space-x-reverse mb-12">
+          <a href="#contact" class="glow-btn bg-brand-emerald hover:bg-brand-emerald/90 text-white font-bold text-center px-8 py-4 rounded-xl shadow-xl shadow-brand-emerald/30 text-base">
+            <span class="lang-ar">احجز زيارة مجانية للفحص</span>
+            <span class="lang-en">Book a Free Inspection</span>
+          </a>
+          <a href="tel:01050021099" class="border border-white/40 hover:border-white text-white font-bold text-center px-8 py-4 rounded-xl backdrop-blur-sm text-base transition-colors flex items-center justify-center space-x-2 rtl:space-x-reverse">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.9.72l.54 2.13a1 1 0 01-.34.98L7.02 7.75a15.91 15.91 0 006.23 6.23l1.15-1.15a1 1 0 01.98-.34l2.13.54a1 1 0 01.72.9V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            <span class="lang-ar">اتصل بنا الآن</span>
+            <span class="lang-en">Call Us Now</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges & Certifications Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10">
+          <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="p-2.5 bg-white/10 rounded-xl text-brand-emerald">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold">100%</div>
+              <div class="text-xs text-white/60"><span class="lang-ar">حلول آمنة</span><span class="lang-en">Safe Solutions</span></div>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="p-2.5 bg-white/10 rounded-xl text-brand-emerald">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold">24/7</div>
+              <div class="text-xs text-white/60"><span class="lang-ar">خدمة طوارئ</span><span class="lang-en">Emergency Service</span></div>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="p-2.5 bg-white/10 rounded-xl text-brand-emerald">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12V5a2 2 0 012-2h2a2 2 0 012 2v7m0 5a2 2 0 01-2 2h-2a2 2 0 01-2-2m-3-5h12"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold"><span class="lang-ar">مرخصة</span><span class="lang-en">Licensed</span></div>
+              <div class="text-xs text-white/60"><span class="lang-ar">اعتماد حكومي</span><span class="lang-en">Gov Certified</span></div>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="p-2.5 bg-white/10 rounded-xl text-brand-emerald">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.757a1 1 0 00.707-1.707l-5.414-5.414a1 1 0 00-1.414 0L7.228 8.293a1 1 0 00.707 1.707H13v1H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2h-5v-1z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold">12k+</div>
+              <div class="text-xs text-white/60"><span class="lang-ar">عملاء سعداء</span><span class="lang-en">Happy Clients</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Spacer for Desktop Grid (Highlights background composition) -->
+      <div class="hidden lg:col-span-4 lg:flex flex-col justify-end items-end relative">
+        <div class="absolute bottom-10 right-0 glass-card text-brand-charcoal p-6 rounded-2xl border border-white/30 flex items-center space-x-4 rtl:space-x-reverse shadow-2xl">
+          <div class="w-12 h-12 rounded-full bg-brand-emerald flex items-center justify-center text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="text-base font-bold text-brand-deep"><span class="lang-ar">ضمان حقيقي</span><span class="lang-en">Real Warranty</span></div>
+            <div class="text-xs text-slate-500"><span class="lang-ar">متابعة مجانية 100%</span><span class="lang-en">100% Free Followups</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- FLOATING CONTACT BAR --- -->
+  <!-- Floating Contact Bar -->
+  <div class="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col space-y-3 md:right-6">
+    <!-- Phone Call -->
+    <a href="tel:01050021099" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white hover:bg-brand-deep text-brand-deep hover:text-white shadow-xl border border-slate-100 hover-lift relative group transition-all duration-300">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.9.72l.54 2.13a1 1 0 01-.34.98L7.02 7.75a15.91 15.91 0 006.23 6.23l1.15-1.15a1 1 0 01.98-.34l2.13.54a1 1 0 01.72.9V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      </svg>
+      <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-brand-charcoal text-white text-xs px-2.5 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+        <span class="lang-ar">اتصل الآن</span><span class="lang-en">Call Now</span>
+      </span>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/201033594888" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white hover:bg-emerald-500 text-emerald-500 hover:text-white shadow-xl border border-slate-100 hover-lift relative group transition-all duration-300">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+      </svg>
+      <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-brand-charcoal text-white text-xs px-2.5 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+        <span class="lang-ar">واتساب</span><span class="lang-en">WhatsApp</span>
+      </span>
+    </a>
+
+    <!-- Messenger -->
+    <a href="https://m.me/1Ef61gxMEF" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white hover:bg-blue-500 text-blue-500 hover:text-white shadow-xl border border-slate-100 hover-lift relative group transition-all duration-300">
+      <svg class="w-5 h-5 fill-currentColor" viewBox="0 0 24 24">
+        <path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.498 1.743 6.629 4.479 8.652v3.648c0 .285.25.49.52.417l4.089-1.124A12.756 12.756 0 0012 22.222c6.627 0 12-4.974 12-11.111S18.627 0 12 0zm1.189 14.417l-2.608-2.775-5.093 2.775 5.599-5.942 2.674 2.775 5.027-2.775-5.599 5.942z"></path>
+      </svg>
+      <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-brand-charcoal text-white text-xs px-2.5 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+        <span class="lang-ar">ماسنجر</span><span class="lang-en">Messenger</span>
+      </span>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/1Ef61gxMEF/" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white hover:bg-blue-600 text-blue-600 hover:text-white shadow-xl border border-slate-100 hover-lift relative group transition-all duration-300">
+      <svg class="w-5 h-5 fill-currentColor" viewBox="0 0 24 24">
+        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.39-1 1-1h2V2h-3c-2.4 0-4 1.2-4 4v2z"></path>
+      </svg>
+      <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-brand-charcoal text-white text-xs px-2.5 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+        <span class="lang-ar">فيسبوك</span><span class="lang-en">Facebook</span>
+      </span>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/4_german_company_?igsh=OW53OTBzZ2hwdzZv" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white hover:bg-pink-600 text-pink-600 hover:text-white shadow-xl border border-slate-100 hover-lift relative group transition-all duration-300">
+      <svg class="w-5 h-5 fill-currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+      </svg>
+      <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-brand-charcoal text-white text-xs px-2.5 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+        <span class="lang-ar">إنستغرام</span><span class="lang-en">Instagram</span>
+      </span>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@germancompany4?_r=1&_t=ZS-97ay7vejVmj" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white hover:bg-black text-black hover:text-white shadow-xl border border-slate-100 hover-lift relative group transition-all duration-300">
+      <svg class="w-5 h-5 fill-currentColor" viewBox="0 0 24 24">
+        <path d="M12.525.02c1.31 0 2.5.43 3.47 1.17.08.06.15.11.22.17V.02h2.51v12.22c0 2.79-2.27 5.06-5.06 5.06-2.79 0-5.06-2.27-5.06-5.06 0-2.61 1.97-4.75 4.51-5.02v2.54c-1.12.25-1.95 1.25-1.95 2.48 0 1.39 1.13 2.52 2.52 2.52 1.39 0 2.52-1.13 2.52-2.52V4.99c.98.67 2.14 1.07 3.39 1.11V3.58c-1.37-.04-2.61-.63-3.52-1.56V.02h-3.05v3.13C12.44 1.21 12.49.02 12.525.02z"></path>
+      </svg>
+      <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-brand-charcoal text-white text-xs px-2.5 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+        <span class="lang-ar">تيك توك</span><span class="lang-en">TikTok</span>
+      </span>
+    </a>
+
+    <!-- X -->
+    <a href="#" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-white hover:bg-slate-900 text-slate-900 hover:text-white shadow-xl border border-slate-100 hover-lift relative group transition-all duration-300">
+      <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+      </svg>
+      <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-brand-charcoal text-white text-xs px-2.5 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+        <span class="lang-ar">إكس (تويتر)</span><span class="lang-en">X (Twitter)</span>
+      </span>
+    </a>
+  </div>
+  <!-- --- END FLOATING CONTACT BAR --- -->
+
+  <!-- --- 2. WHY CHOOSE US --- -->
+  <section class="py-24 bg-white relative overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-black text-brand-deep mb-4">
+          <span class="lang-ar">لماذا يختار النخبة الشركة الألمانية؟</span>
+          <span class="lang-en">Why Premium Clients Choose The German Company</span>
+        </h2>
+        <div class="w-20 h-1.5 bg-brand-emerald mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-600 text-base leading-relaxed">
+          <span class="lang-ar">نضع التميز والكفاءة في مقدمة أولوياتنا من خلال معايير تشغيل دولية وفريق عمل رفيع المستوى.</span>
+          <span class="lang-en">We set the benchmark for high-end pest management through global standards, certified experts, and unparalleled support.</span>
+        </p>
+      </div>
+
+      <!-- Modern Icon Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Licensed Experts -->
+        <div class="p-8 rounded-2xl bg-brand-light border border-slate-100 hover-lift flex flex-col items-start text-right rtl:text-right ltr:text-left">
+          <div class="w-14 h-14 rounded-xl bg-brand-deep/5 text-brand-deep flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-deep mb-3">
+            <span class="lang-ar">خبراء ومهندسون مرخصون</span>
+            <span class="lang-en">Licensed Experts & Engineers</span>
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            <span class="lang-ar">يشرف على تقديم الخدمات نخبة من المهندسين الزراعيين والكيميائيين المؤهلين علمياً وعملياً.</span>
+            <span class="lang-en">Our services are designed and monitored by qualified entomologists and chemical engineers to ensure clinical precision.</span>
+          </p>
+        </div>
+
+        <!-- Card 2: Safe Chemicals -->
+        <div class="p-8 rounded-2xl bg-brand-light border border-slate-100 hover-lift flex flex-col items-start text-right rtl:text-right ltr:text-left">
+          <div class="w-14 h-14 rounded-xl bg-brand-deep/5 text-brand-deep flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-deep mb-3">
+            <span class="lang-ar">مواد كيميائية صديقة للبيئة</span>
+            <span class="lang-en">Eco-Friendly & Safe Chemicals</span>
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            <span class="lang-ar">جميع المواد المستخدمة مصرحة من منظمة الصحة العالمية ووزارة الصحة المصرية وآمنة تماماً للأطفال والحيوانات الأليفة.</span>
+            <span class="lang-en">All pest treatment agents are WHO approved, low-toxicity, odorless, and completely safe for children, pets, and patients.</span>
+          </p>
+        </div>
+
+        <!-- Card 3: Fast Response -->
+        <div class="p-8 rounded-2xl bg-brand-light border border-slate-100 hover-lift flex flex-col items-start text-right rtl:text-right ltr:text-left">
+          <div class="w-14 h-14 rounded-xl bg-brand-deep/5 text-brand-deep flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-deep mb-3">
+            <span class="lang-ar">استجابة فائقة السرعة</span>
+            <span class="lang-en">Ultra-Fast 24-Hour Response</span>
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            <span class="lang-ar">نحن نتفهم الحالات الطارئة، لذلك يصلك فريق التقييم التابع لنا خلال ساعات قليلة من تسجيل الطلب.</span>
+            <span class="lang-en">We understand emergency infestation scenarios. Our rapid mobilization teams reach you within hours across major cities.</span>
+          </p>
+        </div>
+
+        <!-- Card 4: Warranty -->
+        <div class="p-8 rounded-2xl bg-brand-light border border-slate-100 hover-lift flex flex-col items-start text-right rtl:text-right ltr:text-left">
+          <div class="w-14 h-14 rounded-xl bg-brand-deep/5 text-brand-deep flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-deep mb-3">
+            <span class="lang-ar">ضمان ممتد مع زيارات مجانية</span>
+            <span class="lang-en">Extended Written Warranty</span>
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            <span class="lang-ar">نوفر عقود ضمان حقيقية مكتوبة تمتد حتى 3 سنوات تضمن تكرار الخدمة مجاناً في حال عودة الإصابة.</span>
+            <span class="lang-en">Our treatment solutions come backed by concrete warranties up to 3 years, with scheduled complimentary touch-ups.</span>
+          </p>
+        </div>
+
+        <!-- Card 5: Affordable Prices -->
+        <div class="p-8 rounded-2xl bg-brand-light border border-slate-100 hover-lift flex flex-col items-start text-right rtl:text-right ltr:text-left">
+          <div class="w-14 h-14 rounded-xl bg-brand-deep/5 text-brand-deep flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-deep mb-3">
+            <span class="lang-ar">قيمة ممتازة مقابل السعر</span>
+            <span class="lang-en">Corporate-Grade Fair Pricing</span>
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            <span class="lang-ar">نضمن تقديم أفضل جودة خدمة وأعلى معايير أمان مع خطط تسعير واضحة وخيارات سداد مرنة للمنشآت.</span>
+            <span class="lang-en">Transparent corporate and residential billing plans. High-value service packages with no hidden custom surcharges.</span>
+          </p>
+        </div>
+
+        <!-- Card 6: Latest Equipment -->
+        <div class="p-8 rounded-2xl bg-brand-light border border-slate-100 hover-lift flex flex-col items-start text-right rtl:text-right ltr:text-left">
+          <div class="w-14 h-14 rounded-xl bg-brand-deep/5 text-brand-deep flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-deep mb-3">
+            <span class="lang-ar">أحدث تقنيات المكافحة والتعفير</span>
+            <span class="lang-en">Premium Modern ULV Fogging</span>
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            <span class="lang-ar">نعتمد على آلات التعفير الحراري والرش ذو الحجم متناهي الصغر (ULV) لكشف وإبادة الآفات الخفية.</span>
+            <span class="lang-en">We utilize high-efficiency Ultra Low Volume (ULV) foggers and micro-injection units for precision chemical delivery.</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --- 3. ABOUT US --- -->
+  <section id="about" class="py-24 bg-brand-light relative overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Left: Enhanced Image Composition -->
+        <div class="lg:col-span-5 relative hidden lg:block">
+          <!-- Backing abstract circle -->
+          <div class="absolute -top-10 -left-10 w-72 h-72 rounded-full bg-brand-emerald/10 filter blur-3xl"></div>
+          <div class="absolute -bottom-10 -right-10 w-72 h-72 rounded-full bg-brand-deep/10 filter blur-3xl"></div>
+          
+          <div class="relative grid grid-cols-2 gap-4">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=600" alt="Professional cleaning" class="w-full h-72 object-cover rounded-3xl shadow-xl transform translate-y-8 hover:-translate-y-2 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1584820927498-cafe2c16a695?auto=format&fit=crop&q=80&w=600" alt="Pest control" class="w-full h-72 object-cover rounded-3xl shadow-xl hover:-translate-y-2 transition-transform duration-500">
+            
+            <!-- Floating badge -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 glass-card p-4 rounded-full border border-white shadow-2xl z-10">
+              <div class="w-16 h-16 bg-brand-emerald rounded-full flex items-center justify-center text-white shadow-inner animate-pulse">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="lg:col-span-7 flex flex-col justify-center text-right rtl:text-right ltr:text-left">
+          <div class="inline-flex items-center space-x-2 rtl:space-x-reverse bg-brand-deep/5 text-brand-deep px-4 py-2 rounded-full text-xs font-bold mb-6 w-fit border border-brand-deep/10">
+            <span class="lang-ar">عن الشركة الألمانية</span>
+            <span class="lang-en">About The German Company</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-black text-brand-deep leading-tight mb-6">
+            <span class="lang-ar">شريكك الموثوق لبيئة معقمة وخالية من الحشرات</span>
+            <span class="lang-en">Your trusted partner for sterile, pest-free environments</span>
+          </h2>
+
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-10">
+            <span class="lang-ar">تأسست الشركة الألمانية لمكافحة الحشرات والقوارض لتلبية متطلبات الشركات والهيئات الكبرى في مصر. لا يقتصر دورنا على تقديم خدمات تقليدية للتخلص من الحشرات، بل نصمم برامج متكاملة للإدارة والوقاية والتعقيم البيئي للمؤسسات، والمستشفيات، والقصور السكنية وفقاً لمعايير الجودة العالمية.</span>
+            <span class="lang-en">The German Company was founded to meet the demands of Egypt's elite residential complexes and corporations. We craft end-to-end Integrated Pest Management (IPM) systems built on advanced ecological sciences.</span>
+          </p>
+
+          <!-- Tabs for Mission & Vision -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+            <div class="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-start hover-lift">
+              <div class="p-4 bg-brand-emerald/10 text-brand-emerald rounded-xl mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-brand-deep text-lg mb-2">
+                <span class="lang-ar">رسالتنا</span><span class="lang-en">Our Mission</span>
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                <span class="lang-ar">توفير بيئات صحية وآمنة عبر حلول مستدامة وخالية من الانبعاثات والروائح الضارة.</span>
+                <span class="lang-en">Providing secure, sanitary habitats via carbon-conscious, odorless pest prevention tactics.</span>
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-start hover-lift">
+              <div class="p-4 bg-brand-deep/10 text-brand-deep rounded-xl mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-brand-deep text-lg mb-2">
+                <span class="lang-ar">رؤيتنا</span><span class="lang-en">Our Vision</span>
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                <span class="lang-ar">أن نكون الرمز الأول للمكافحة الفاخرة والتعقيم البيئي الذكي في الشرق الأوسط.</span>
+                <span class="lang-en">Becoming the premier benchmark for corporate pest control and smart green sanitation in MENA.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Animated Counter Stats Container -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-200">
+            <div>
+              <div class="text-3xl md:text-4xl font-black text-brand-emerald flex items-center justify-start rtl:justify-end">
+                <span>+</span><span class="stat-number" data-target="10">0</span>
+              </div>
+              <div class="text-xs text-slate-500 font-bold mt-1 uppercase tracking-wider">
+                <span class="lang-ar">سنوات خبرة</span><span class="lang-en">Years Experience</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-3xl md:text-4xl font-black text-brand-emerald flex items-center justify-start rtl:justify-end">
+                <span>+</span><span class="stat-number" data-target="12000">0</span>
+              </div>
+              <div class="text-xs text-slate-500 font-bold mt-1 uppercase tracking-wider">
+                <span class="lang-ar">عميل سعيد</span><span class="lang-en">Happy Clients</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-3xl md:text-4xl font-black text-brand-emerald flex items-center justify-start rtl:justify-end">
+                <span></span><span class="stat-number" data-target="24">0</span><span>/7</span>
+              </div>
+              <div class="text-xs text-slate-500 font-bold mt-1 uppercase tracking-wider">
+                <span class="lang-ar">دعم متواصل</span><span class="lang-en">Support Channels</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-3xl md:text-4xl font-black text-brand-emerald flex items-center justify-start rtl:justify-end">
+                <span class="stat-number" data-target="99">0</span><span>%</span>
+              </div>
+              <div class="text-xs text-slate-500 font-bold mt-1 uppercase tracking-wider">
+                <span class="lang-ar">نسبة النجاح</span><span class="lang-en">Success Rate</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --- 4. OUR SERVICES --- -->
+  <section id="services" class="py-24 bg-white relative overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <div class="inline-flex items-center space-x-2 rtl:space-x-reverse bg-brand-emerald/10 text-brand-emerald px-4 py-1.5 rounded-full text-xs font-bold mb-4">
+          <span class="lang-ar">خدمات مكافحة الآفات الفاخرة</span>
+          <span class="lang-en">Premium Pest Management Programs</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-black text-brand-deep mb-4">
+          <span class="lang-ar">حلول مكافحة متكاملة لكافة القطاعات</span>
+          <span class="lang-en">Precision Solutions Tailored to Your Environment</span>
+        </h2>
+        <div class="w-20 h-1.5 bg-brand-emerald mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-600 text-base leading-relaxed">
+          <span class="lang-ar">نصمم برامج وقاية وحماية تلبي المتطلبات الصارمة للمنازل الراقية، والشركات، والمصانع، والمستشفيات، والفنادق.</span>
+          <span class="lang-en">We map and deploy elite control interventions matching international safety protocols for residential, commercial, and clinical spaces.</span>
+        </p>
+      </div>
+
+      <!-- Services Grid (10 items) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        
+        <!-- Service 1: Bed Bug -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/pest_bedbug.png" alt="Bed Bug" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">مكافحة بق الفراش</span><span class="lang-en">Bed Bug Treatment</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">إبادة تامة للبق وبويضاته بأحدث أجهزة الحقن والتعفير الحراري دون الحاجة لمغادرة المنزل.</span>
+                <span class="lang-en">Absolute eradication of bugs & eggs using specialized micro-injections and localized thermal foggers.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-bedbugs.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Cockroach -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/pest_cockroach.png" alt="Cockroach" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">إبادة الصراصير</span><span class="lang-en">Cockroach Control</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">مكافحة الصراصير الألمانية والأمريكية باستخدام الجل الجاذب والرش العضوي الآمن للمطابخ.</span>
+                <span class="lang-en">Long-lasting protection using targeting bait gels and biological sprays safe for culinary zones.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-cockroaches.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Termite -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/النمل الابيض.jpg" alt="Termites" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">النمل الأبيض (الأرضة)</span><span class="lang-en">Termite Protection</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">حقن التربة قبل وأثناء البناء، مع توفير خنادق كيميائية عازلة لحماية أساسات المباني بضمان 10 سنوات.</span>
+                <span class="lang-en">Pre-construction soil barrier creation and sub-slab drilling protocols backed by a 10-year warranty.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-termites.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Wood Borer -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/سوس الخشب.png" alt="Wood Borer" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">سوس الخشب</span><span class="lang-en">Wood Borers</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">معالجة سوس الخشب والديدان الناخرة بالحقن الكيميائي الموضع والتعفير لحماية الأثاث والأسقف.</span>
+                <span class="lang-en">Eradication of wood-boring beetles and wood worms using micro-injection and customized structural treatments.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-woodborers.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Ant Control -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/مكافحة النمل.png" alt="Ants" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11.57V11M12 11c0-2.9-1.91-5.32-4.57-6.078M12 11c0 2.9 1.91 5.32 4.57 6.078M12 11V3m0 0l-3 3m3-3l3 3"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">مكافحة النمل</span><span class="lang-en">Ant Control</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">علاج ثوري للنمل العادي والنمل الناري باستخدام طعوم غذائية تقضي على المستعمرة بالكامل.</span>
+                <span class="lang-en">Targeted nutritional baiting system that spreads to the heart of the nest, shutting down the colony.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-ants.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Mosquito Control -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/ابادة البعوض.jpg" alt="Mosquitoes" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">إبادة البعوض</span><span class="lang-en">Mosquito Control</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">رش ضبابي خارجي للمساحات الخضراء والحدائق للتخلص من البعوض واليرقات بشكل كامل.</span>
+                <span class="lang-en">Exterior thermal fogging and biological larvicide water treatments for luxurious gardens.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-mosquitoes.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 7: Fly Control -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/مكافحة الذباب.jpg" alt="Flies" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11V3m0 0l-3 3m3-3l3 3"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">مكافحة الذباب</span><span class="lang-en">Fly Control</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">مكافحة الذباب للمطاعم والمنشآت الغذائية باستخدام طعوم متطورة وأجهزة صيد ضوئية لاصقة.</span>
+                <span class="lang-en">Industrial fly interceptors and environmental control programs tailored for culinary zones.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-flies.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 8: Flea Control -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/ابادة البراغيث.png" alt="Fleas" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">إبادة البراغيث</span><span class="lang-en">Flea Eradication</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">علاج بيئي كامل للسجاد والحدائق للقضاء التام على البراغيث وحشرات الحيوانات الأليفة.</span>
+                <span class="lang-en">Double-action chemical rinsing targeting larvae and adult fleas on carpets and gardens.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-fleas.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 9: Rodent Control -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&q=80&w=800" alt="Rodents" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">مكافحة القوارض</span><span class="lang-en">Rodent Control</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">محطات طعوم ذكية آمنة ومصدات بيئية لمنع دخول الفئران للمخازن والفلل والحدائق.</span>
+                <span class="lang-en">Integrated rodent barrier installation, trapping, and mapping solutions for warehouses.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-rodents.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 10: Spider Control -->
+        <div class="group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover-lift flex flex-col justify-between h-[450px] transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/مكافحة العناكب.png" alt="Spiders" loading="lazy" class="w-full h-full object-cover hover-zoom-img">
+            <div class="absolute bottom-4 left-4 w-12 h-12 rounded-xl glass-card flex items-center justify-center text-brand-emerald shadow-md">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-brand-deep mb-2">
+                <span class="lang-ar">مكافحة العناكب</span><span class="lang-en">Spider Control</span>
+              </h3>
+              <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">
+                <span class="lang-ar">إزالة خيوط العنكبوت ورش مبيدات وقائية تمنع ظهور العناكب والنسيج بالمرتفعات.</span>
+                <span class="lang-en">Clearing webs and spraying long-term boundary barriers to prevent ceiling re-infestations.</span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a href="pest-spiders.html" class="text-xs font-bold text-brand-emerald hover:text-brand-deep transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse">
+                <span class="lang-ar">عرض المزيد</span><span class="lang-en">Learn More</span>
+                <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --- 5. HOW WE WORK --- -->
+  <section id="work" class="py-24 bg-brand-light relative overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="text-3xl md:text-4xl font-black text-brand-deep mb-4">
+          <span class="lang-ar">رحلة المكافحة والتعقيم بخمس خطوات ذكية</span>
+          <span class="lang-en">Our 5-Step Scientific Process</span>
+        </h2>
+        <div class="w-20 h-1.5 bg-brand-emerald mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-600 text-base leading-relaxed">
+          <span class="lang-ar">نتبع منهجاً علمياً مدروساً يبدأ من التحليل الدقيق وينتهي بالضمان والمتابعة لضمان إبادة أبدية للآفات.</span>
+          <span class="lang-en">Our operations are designed systematically around a 5-phase scientific strategy built on continuous verification.</span>
+        </p>
+      </div>
+
+      <!-- Timeline Component -->
+      <div class="relative">
+        <!-- Connecting Line for Desktop -->
+        <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-brand-deep via-brand-emerald to-brand-deep transform -translate-y-1/2 z-0"></div>
+        
+        <!-- Step Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 relative z-10">
+          
+          <!-- Step 1: Inspection -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center hover-lift relative">
+            <div class="w-16 h-16 rounded-full bg-brand-deep text-white flex items-center justify-center font-bold text-xl mb-6 timeline-dot">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-brand-deep mb-2">
+              <span class="lang-ar">الفحص والمعاينة</span><span class="lang-en">Inspection & Audit</span>
+            </h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              <span class="lang-ar">فحص شامل لكامل أرجاء العقار وتحديد مسارات دخول الحشرات ومخابئها.</span>
+              <span class="lang-en">Full premises audit to identify cracks, entry zones, and nesting vulnerabilities.</span>
+            </p>
+          </div>
+
+          <!-- Step 2: Identify -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center hover-lift relative">
+            <div class="w-16 h-16 rounded-full bg-brand-emerald text-white flex items-center justify-center font-bold text-xl mb-6 timeline-dot">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-brand-deep mb-2">
+              <span class="lang-ar">تحديد نوع الآفة</span><span class="lang-en">Identify & Map</span>
+            </h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              <span class="lang-ar">تحديد فصيلة الآفات بدقة لاختيار الأمصال والمواد الكيميائية الفعالة لها.</span>
+              <span class="lang-en">Entomological mapping to select target-specific bio-agents.</span>
+            </p>
+          </div>
+
+          <!-- Step 3: Treatment -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center hover-lift relative">
+            <div class="w-16 h-16 rounded-full bg-brand-deep text-white flex items-center justify-center font-bold text-xl mb-6 timeline-dot">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-brand-deep mb-2">
+              <span class="lang-ar">التنفيذ والمكافحة</span><span class="lang-en">Treatment & Execution</span>
+            </h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              <span class="lang-ar">رش آمن للمبيدات وتوزيع الجل الكيميائي والتعفير بأحدث الأدوات.</span>
+              <span class="lang-en">Precision boundary spraying, custom bait placement, and ULV fogging.</span>
+            </p>
+          </div>
+
+          <!-- Step 4: Follow-up -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center hover-lift relative">
+            <div class="w-16 h-16 rounded-full bg-brand-emerald text-white flex items-center justify-center font-bold text-xl mb-6 timeline-dot">
+              04
+            </div>
+            <h3 class="text-lg font-bold text-brand-deep mb-2">
+              <span class="lang-ar">المتابعة والتقييم</span><span class="lang-en">Audit & Follow-up</span>
+            </h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              <span class="lang-ar">زيارة متابعة مجدولة للتأكد من خلو المكان تماماً ومنع ظهور جيل جديد من الحشرات.</span>
+              <span class="lang-en">Post-treatment audits to review trap counts and boundary conditions.</span>
+            </p>
+          </div>
+
+          <!-- Step 5: Guarantee -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center hover-lift relative">
+            <div class="w-16 h-16 rounded-full bg-brand-deep text-white flex items-center justify-center font-bold text-xl mb-6 timeline-dot">
+              05
+            </div>
+            <h3 class="text-lg font-bold text-brand-deep mb-2">
+              <span class="lang-ar">عقد الضمان النهائي</span><span class="lang-en">Written Guarantee</span>
+            </h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              <span class="lang-ar">تسليم شهادة الضمان المعتمدة ومتابعات دورية طوال مدة التعاقد.</span>
+              <span class="lang-en">Handover of legally-binding warranty documents for complete peace of mind.</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --- 6. BEFORE & AFTER --- -->
+  <section id="comparison" class="py-24 bg-white relative overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <!-- Text details -->
+        <div class="lg:col-span-5 text-right rtl:text-right ltr:text-left">
+          <div class="inline-flex items-center space-x-2 rtl:space-x-reverse bg-brand-emerald/10 text-brand-emerald px-4 py-1.5 rounded-full text-xs font-bold mb-4">
+            <span class="lang-ar">نتائج حقيقية مذهلة</span>
+            <span class="lang-en">Tangible Quality Standard</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-black text-brand-deep mb-6 leading-tight">
+            <span class="lang-ar">شاهد الفارق بنفسك مع حلولنا الاحترافية</span>
+            <span class="lang-en">Observe the sanitary transition firsthand</span>
+          </h2>
+
+          <p class="text-slate-600 text-base leading-relaxed mb-8">
+            <span class="lang-ar">قم بسحب شريط التمرير لرؤية الفارق قبل وبعد تطبيق برامج مكافحة الآفات والتعقيم الشامل. نحن لا نترك أثراً للأتربة، أو خيوط العناكب، أو البيوض، لنعيد لعقارك بريقه الصحي ونظافته المثالية.</span>
+            <span class="lang-en">Drag the center slider to inspect the exact transition from compromised environments to highly-sanitized, spotless spaces. We eliminate eggs, nests, and chemical footprints.</span>
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+              <div class="w-6 h-6 rounded-full bg-brand-emerald/20 text-brand-emerald flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="text-slate-600 text-sm font-semibold">
+                <span class="lang-ar">إزالة البكتيريا والفطريات الضارة بنسبة 99.9%</span>
+                <span class="lang-en">99.9% Elimination of biological contaminants</span>
+              </span>
+            </div>
+
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+              <div class="w-6 h-6 rounded-full bg-brand-emerald/20 text-brand-emerald flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="text-slate-600 text-sm font-semibold">
+                <span class="lang-ar">تطهير كامل لأسطح تحضير الأطعمة بالمطابخ</span>
+                <span class="lang-en">Full food-grade surface bio-decontamination</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider element -->
+        <div class="lg:col-span-7 flex justify-center">
+          <div class="slider-container">
+            <!-- Before Image (Base) -->
+            <img src="assets/pest_before.png" alt="Before" class="slider-img img-before">
+            
+            <!-- After Image (Overlay) -->
+            <img id="after-image" src="assets/pest_after.png" alt="After" class="slider-img img-after">
+            
+            <!-- Control bar & handle -->
+            <div id="slider-bar" class="slider-button">
+              <div class="slider-button-handle">
+                <span class="lang-ar">↔</span><span class="lang-en">↔</span>
+              </div>
+            </div>
+            
+            <!-- Range input to control overlay -->
+            <input type="range" min="0" max="100" value="50" class="slider-input" id="slider-range">
+
+            <!-- Labels -->
+            <span class="slider-label label-before bg-brand-deep/90 text-white">
+              <span class="lang-ar">قبل المعالجة</span><span class="lang-en">Before Treatment</span>
+            </span>
+            <span class="slider-label label-after bg-brand-emerald/90 text-white">
+              <span class="lang-ar">بعد المعالجة</span><span class="lang-en">After Treatment</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- --- 7. CUSTOMER TESTIMONIALS --- -->
+  <section class="py-24 bg-brand-light relative overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Heading -->
+      <div class="flex flex-col md:flex-row items-end justify-between mb-16 max-w-7xl mx-auto">
+        <div class="text-right rtl:text-right ltr:text-left max-w-2xl">
+          <div class="inline-flex items-center space-x-2 rtl:space-x-reverse bg-brand-deep/5 text-brand-deep px-4 py-1.5 rounded-full text-xs font-bold mb-4">
+            <span class="lang-ar">آراء شركاء النجاح</span>
+            <span class="lang-en">Corporate & Residential Testimonials</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-black text-brand-deep">
+            <span class="lang-ar">ماذا يقول عملاؤنا في مصر؟</span>
+            <span class="lang-en">Trusted by homeowners and facility executives</span>
+          </h2>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-6 md:mt-0">
+          <button id="testimonial-prev" class="w-12 h-12 rounded-full border border-slate-300 hover:border-brand-emerald hover:bg-white text-brand-deep flex items-center justify-center transition-all">
+            ←
+          </button>
+          <button id="testimonial-next" class="w-12 h-12 rounded-full border border-slate-300 hover:border-brand-emerald hover:bg-white text-brand-deep flex items-center justify-center transition-all">
+            →
+          </button>
+        </div>
+      </div>
+
+      <!-- Testimonial Slider/Track Wrapper -->
+      <div class="relative overflow-hidden w-full" id="testimonial-carousel">
+        <div class="flex transition-transform duration-500 ease-out" id="testimonial-track" style="transform: translateX(0px);">
+          
+          <!-- Slide 1: Residential Client -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 testimonial-slide">
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 flex flex-col justify-between h-full hover-lift text-right rtl:text-right ltr:text-left">
+              <div>
+                <!-- Stars -->
+                <div class="flex items-center space-x-1 rtl:space-x-reverse text-brand-gold mb-6">
+                  ★★★★★
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
+                  <span class="lang-ar">"كانت لدينا مشكلة بق الفراش مستعصية في فيلا التجمع الخامس، تواصلنا مع الشركة الألمانية لمكافحة الحشرات والقوارض وقاموا بالرش والتعفير الحراري بمهنية فائقة ولم يظهر البق مرة أخرى، والضمان حقيقي."</span>
+                  <span class="lang-en">"Amazing clinical standard. They handled a stubborn bed bug outbreak in our villa in New Cairo with ultimate professional machinery. Not a single bug since."</span>
+                </p>
+              </div>
+              <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <div class="w-12 h-12 rounded-full bg-brand-deep/10 text-brand-deep flex items-center justify-center font-bold">
+                  أ.م
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-deep text-sm">
+                    <span class="lang-ar">أحمد منصور</span><span class="lang-en">Ahmed Mansour</span>
+                  </h4>
+                  <p class="text-slate-400 text-xs">
+                    <span class="lang-ar">مالك فيلا - التجمع الخامس</span><span class="lang-en">Villa Owner - New Cairo</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Commercial (Hotel) -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 testimonial-slide">
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 flex flex-col justify-between h-full hover-lift text-right rtl:text-right ltr:text-left">
+              <div>
+                <div class="flex items-center space-x-1 rtl:space-x-reverse text-brand-gold mb-6">
+                  ★★★★★
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
+                  <span class="lang-ar">"بصفتنا فندقًا فاخرًا، لا مجال للخطأ فيما يتعلق بالحشرات. تتعامل الشركة الألمانية لمكافحة الحشرات والقوارض معنا بعقد سنوي متكامل وتفوق توقعاتنا دائماً في المتابعة والسرعة."</span>
+                  <span class="lang-en">"As a luxury boutique hotel, we cannot compromise on hygiene. The German Company provides flawless monthly audits and emergency sweeps that satisfy hospitality standards."</span>
+                </p>
+              </div>
+              <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <div class="w-12 h-12 rounded-full bg-brand-deep/10 text-brand-deep flex items-center justify-center font-bold">
+                  م.س
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-deep text-sm">
+                    <span class="lang-ar">م. شريف عبد العزيز</span><span class="lang-en">Sherif Abdelaziz</span>
+                  </h4>
+                  <p class="text-slate-400 text-xs">
+                    <span class="lang-ar">مدير العمليات - فندق بالزمالك</span><span class="lang-en">Director of Operations - Zamalek Hotel</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Commercial (Hospital) -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 testimonial-slide">
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 flex flex-col justify-between h-full hover-lift text-right rtl:text-right ltr:text-left">
+              <div>
+                <div class="flex items-center space-x-1 rtl:space-x-reverse text-brand-gold mb-6">
+                  ★★★★★
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
+                  <span class="lang-ar">"معايير مكافحة العدوى والتعقيم في المستشفى لدينا صارمة جداً. أثبتت الشركة الألمانية لمكافحة الحشرات والقوارض قدرتها على توفير تعقيم طبي ومكافحة آفات مطابقة لبروتوكولات وزارة الصحة."</span>
+                  <span class="lang-en">"Infection control regulations are highly demanding in our clinic. The German Company's sterile biological sprays and records are fully compliant and highly professional."</span>
+                </p>
+              </div>
+              <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <div class="w-12 h-12 rounded-full bg-brand-deep/10 text-brand-deep flex items-center justify-center font-bold">
+                  د.ع
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-deep text-sm">
+                    <span class="lang-ar">د. علاء الدين عثمان</span><span class="lang-en">Dr. Alaa Osmam</span>
+                  </h4>
+                  <p class="text-slate-400 text-xs">
+                    <span class="lang-ar">مدير الجودة - مستشفى خاص</span><span class="lang-en">Quality Director - Specialist Hospital</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Residential (Apartment) -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 testimonial-slide">
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 flex flex-col justify-between h-full hover-lift text-right rtl:text-right ltr:text-left">
+              <div>
+                <div class="flex items-center space-x-1 rtl:space-x-reverse text-brand-gold mb-6">
+                  ★★★★★
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
+                  <span class="lang-ar">"أفضل تجربة مكافحة نمل وصراصير مررت بها. الخدمة سريعة وفريق العمل محترم جداً، والمبيد ليس له رائحة على الإطلاق، وهو مريح جداً للأطفال."</span>
+                  <span class="lang-en">"Fantastic service! Low toxicity, zero odor, completely safe for children. The engineers resolved our ant and cockroach problem inside our Maadi flat in a single visit."</span>
+                </p>
+              </div>
+              <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <div class="w-12 h-12 rounded-full bg-brand-deep/10 text-brand-deep flex items-center justify-center font-bold">
+                  ن.م
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-deep text-sm">
+                    <span class="lang-ar">نهى المحمودي</span><span class="lang-en">Noha El-Mahmoudy</span>
+                  </h4>
+                  <p class="text-slate-400 text-xs">
+                    <span class="lang-ar">ربة منزل - المعادي</span><span class="lang-en">Homeowner - Maadi</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- --- 8. FAQ --- -->
+  <section id="faq" class="py-24 bg-white relative overflow-hidden reveal">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <!-- Section Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-black text-brand-deep mb-4">
+          <span class="lang-ar">الأسئلة الشائعة والاستفسارات</span>
+          <span class="lang-en">Frequently Asked Questions</span>
+        </h2>
+        <div class="w-20 h-1.5 bg-brand-emerald mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-600 text-base">
+          <span class="lang-ar">توضيحات هامة حول أمان المبيدات وطرق المعالجة وفترات الضمان.</span>
+          <span class="lang-en">Got questions? Find clear answers regarding chemical safety, schedules, and warranties.</span>
+        </p>
+      </div>
+
+      <!-- Accordion Grid -->
+      <div class="space-y-4">
+        
+        <!-- FAQ 1: How long does treatment take? -->
+        <div class="faq-item border border-slate-100 rounded-2xl bg-brand-light overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full p-6 text-right rtl:text-right ltr:text-left flex items-center justify-between font-bold text-brand-deep hover:bg-slate-50 transition-colors focus:outline-none" aria-expanded="false">
+            <span class="text-base md:text-lg">
+              <span class="lang-ar">كم من الوقت تستغرق زيارة المعالجة؟</span>
+              <span class="lang-en">How long does a standard treatment session take?</span>
+            </span>
+            <span class="faq-icon text-brand-emerald text-xl font-bold transition-transform duration-300">↓</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+            <div class="p-6 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+              <span class="lang-ar">تستغرق زيارة الفحص والرش العادية للشقة السكنية ما بين 45 إلى 90 دقيقة حسب حجم الإصابة ونوع الآفات المستهدفة. أما الفلل والمصانع الكبرى فيتم تحديد وقتها بعد الفحص الأولي.</span>
+              <span class="lang-en">A standard apartment session takes between 45 to 90 minutes. Large villas, manufacturing units, and hospitals are scheduled based on the initial inspection report and layout size.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2: Are chemicals safe? -->
+        <div class="faq-item border border-slate-100 rounded-2xl bg-brand-light overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full p-6 text-right rtl:text-right ltr:text-left flex items-center justify-between font-bold text-brand-deep hover:bg-slate-50 transition-colors focus:outline-none" aria-expanded="false">
+            <span class="text-base md:text-lg">
+              <span class="lang-ar">هل المواد الكيميائية المستخدمة آمنة على الأطفال والحيوانات الأليفة؟</span>
+              <span class="lang-en">Are the chemicals used safe for children and pets?</span>
+            </span>
+            <span class="faq-icon text-brand-emerald text-xl font-bold transition-transform duration-300">↓</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+            <div class="p-6 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+              <span class="lang-ar">نعم تماماً. نستخدم مبيدات صديقة للبيئة مسجلة في وزارة الصحة والبيئة المصرية ومصرحة من منظمة الصحة العالمية (WHO). تتميز بأنها عديمة الرائحة وذات سمية منخفضة للغاية مخصصة للمنشآت الطبية والغذائية.</span>
+              <span class="lang-en">Absolutely. We deploy eco-conscious biological agents certified by WHO and the Egyptian Health Ministry. These are organic, odorless, and zero-fume, making them perfectly safe for child clinics and kitchens.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3: Do I need to leave the house? -->
+        <div class="faq-item border border-slate-100 rounded-2xl bg-brand-light overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full p-6 text-right rtl:text-right ltr:text-left flex items-center justify-between font-bold text-brand-deep hover:bg-slate-50 transition-colors focus:outline-none" aria-expanded="false">
+            <span class="text-base md:text-lg">
+              <span class="lang-ar">هل يجب عليّ مغادرة المنزل أثناء الرش؟</span>
+              <span class="lang-en">Do I need to vacate the house during treatment?</span>
+            </span>
+            <span class="faq-icon text-brand-emerald text-xl font-bold transition-transform duration-300">↓</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+            <div class="p-6 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+              <span class="lang-ar">في 95% من الحالات، لا داعي نهائياً لمغادرة المنزل أو إفراغ محتويات المطبخ وأواني الطهي، وذلك بفضل استخدام طعوم الجل الكيميائية الموضعية والرش السائل عديم الرائحة. فقط في حالات الإبادة الكلية لبق الفراش بالتعفير قد يُطلب إخلاء الغرفة لساعتين فقط.</span>
+              <span class="lang-en">In 95% of cases, you do not need to leave or empty kitchen shelves. Our targeting gel placements and odorless surface solutions work quietly. vacate directions only apply during deep thermal fogging runs for bed bugs (around 2 hours).</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4: How long is the warranty? -->
+        <div class="faq-item border border-slate-100 rounded-2xl bg-brand-light overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full p-6 text-right rtl:text-right ltr:text-left flex items-center justify-between font-bold text-brand-deep hover:bg-slate-50 transition-colors focus:outline-none" aria-expanded="false">
+            <span class="text-base md:text-lg">
+              <span class="lang-ar">ما هي مدة الضمان وكيف يتم تفعيله؟</span>
+              <span class="lang-en">How long is the warranty and how is it executed?</span>
+            </span>
+            <span class="faq-icon text-brand-emerald text-xl font-bold transition-transform duration-300">↓</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white">
+            <div class="p-6 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+              <span class="lang-ar">تتراوح فترة الضمان المكتوب بين 6 أشهر إلى 3 سنوات حسب الاتفاق ونوع العقد. في حال ظهور أي حشرة مغطاة بالضمان خلال هذه الفترة، نرسل فريقنا لإعادة المعالجة بالكامل مجاناً وبدون أي تكاليف إضافية.</span>
+              <span class="lang-en">Warranties range from 6 months to 3 years depending on target species and contracts. In the rare event of target pest re-entry, we mobilize touch-up treatment immediately at no cost.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --- 9. CONTACT US --- -->
+  <section id="contact" class="py-24 bg-brand-light relative overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-5xl font-black text-brand-deep mb-4">
+          <span class="lang-ar">سجل طلبك للحصول على معاينة مجانية</span>
+          <span class="lang-en">Schedule Your Free Inspection Today</span>
+        </h2>
+        <div class="w-20 h-1.5 bg-brand-emerald mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-600 text-base leading-relaxed">
+          <span class="lang-ar">املأ النموذج وسيقوم مهندس مختص بالتواصل معك فوراً لترتيب زيارة الفحص المجانية.</span>
+          <span class="lang-en">Fill out the form below. A senior chemical engineer will contact you shortly to schedule an audit.</span>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        
+        <!-- Left: Large Contact Form (Glassmorphism card) -->
+        <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl flex flex-col justify-between">
+          
+          <!-- Success message alert -->
+          <div id="form-success-alert" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-bold flex items-center space-x-3 rtl:space-x-reverse">
+            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <div>
+              <span class="lang-ar">تم إرسال طلبك بنجاح! سيتصل بك مهندس الفحص خلال ساعة واحدة.</span>
+              <span class="lang-en">Request submitted successfully! Our engineer will call you within one hour.</span>
+            </div>
+          </div>
+
+          <form id="pest-contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="text-right rtl:text-right ltr:text-left">
+                <label class="block text-sm font-bold text-brand-deep mb-2">
+                  <span class="lang-ar">الاسم الكريم *</span><span class="lang-en">Full Name *</span>
+                </label>
+                <input type="text" name="name" required placeholder="أحمد محمد" class="w-full px-4 py-3 bg-brand-light border border-slate-200 rounded-xl focus:outline-none focus:border-brand-emerald text-sm transition-colors">
+              </div>
+
+              <div class="text-right rtl:text-right ltr:text-left">
+                <label class="block text-sm font-bold text-brand-deep mb-2">
+                  <span class="lang-ar">رقم الهاتف الجوال *</span><span class="lang-en">Mobile Number *</span>
+                </label>
+                <input type="tel" name="phone" required placeholder="+20 100 000 0000" class="w-full px-4 py-3 bg-brand-light border border-slate-200 rounded-xl focus:outline-none focus:border-brand-emerald text-sm transition-colors">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="text-right rtl:text-right ltr:text-left">
+                <label class="block text-sm font-bold text-brand-deep mb-2">
+                  <span class="lang-ar">البريد الإلكتروني</span><span class="lang-en">Email Address</span>
+                </label>
+                <input type="email" name="email" placeholder="name@company.com" class="w-full px-4 py-3 bg-brand-light border border-slate-200 rounded-xl focus:outline-none focus:border-brand-emerald text-sm transition-colors">
+              </div>
+
+              <div class="text-right rtl:text-right ltr:text-left">
+                <label class="block text-sm font-bold text-brand-deep mb-2">
+                  <span class="lang-ar">نوع العقار *</span><span class="lang-en">Property Type *</span>
+                </label>
+                <select name="property_type" class="w-full px-4 py-3 bg-brand-light border border-slate-200 rounded-xl focus:outline-none focus:border-brand-emerald text-sm transition-colors">
+                  <option value="residential"><span class="lang-ar">منزل / شقة سكنية</span><span class="lang-en">Residential Villa / Flat</span></option>
+                  <option value="hotel"><span class="lang-ar">فندق / قرية سياحية</span><span class="lang-en">Hotel / Resort</span></option>
+                  <option value="hospital"><span class="lang-ar">مستشفى / عيادة طبية</span><span class="lang-en">Hospital / Clinic</span></option>
+                  <option value="restaurant"><span class="lang-ar">مطعم / مقهى</span><span class="lang-en">Restaurant / Cafe</span></option>
+                  <option value="corporate"><span class="lang-ar">مكاتب شركات / بنوك</span><span class="lang-en">Corporate Office / Bank</span></option>
+                  <option value="factory"><span class="lang-ar">مصنع / مخزن تجاري</span><span class="lang-en">Factory / Warehouse</span></option>
+                </select>
+              </div>
+            </div>
+
+            <div class="text-right rtl:text-right ltr:text-left">
+              <label class="block text-sm font-bold text-brand-deep mb-2">
+                <span class="lang-ar">نوع الحشرة أو المشكلة الأساسية</span><span class="lang-en">Target Pests / Notes</span>
+              </label>
+              <textarea name="notes" rows="4" placeholder="يرجى ذكر تفاصيل المشكلة..." class="w-full px-4 py-3 bg-brand-light border border-slate-200 rounded-xl focus:outline-none focus:border-brand-emerald text-sm transition-colors"></textarea>
+            </div>
+
+            <button type="submit" class="w-full glow-btn bg-brand-emerald hover:bg-brand-emerald/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-emerald/20 transition-all text-base">
+              <span class="lang-ar">تأكيد حجز زيارة الفحص المجانية</span>
+              <span class="lang-en">Confirm Free Inspection Request</span>
+            </button>
+          </form>
+
+        </div>
+
+        <!-- Right: Contact info & Interactive Map Placeholder -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+          
+          <!-- Contact Info Cards -->
+          <div class="bg-brand-deep text-white p-8 rounded-3xl border border-brand-emerald/20 shadow-xl space-y-6 text-right rtl:text-right ltr:text-left flex-grow">
+            <h3 class="text-xl font-bold border-b border-white/10 pb-4">
+              <span class="lang-ar">معلومات الاتصال المباشر</span>
+              <span class="lang-en">Direct Corporate Contact</span>
+            </h3>
+
+            <!-- Phone -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div class="p-3 bg-white/10 rounded-xl text-brand-emerald flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.9.72l.54 2.13a1 1 0 01-.34.98L7.02 7.75a15.91 15.91 0 006.23 6.23l1.15-1.15a1 1 0 01.98-.34l2.13.54a1 1 0 01.72.9V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-xs text-white/50"><span class="lang-ar">أرقام الاتصال (24/7)</span><span class="lang-en">Contact Numbers (24/7)</span></h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1">
+                  <a href="tel:01050021099" class="text-base font-bold hover:text-brand-emerald transition-colors block">01050021099</a>
+                  <a href="tel:01210005539" class="text-base font-bold hover:text-brand-emerald transition-colors block">01210005539</a>
+                  <a href="tel:01110633368" class="text-base font-bold hover:text-brand-emerald transition-colors block">01110633368</a>
+                  <!-- 01033594888 is strictly for WhatsApp as requested -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Landline -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div class="p-3 bg-white/10 rounded-xl text-brand-emerald flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs text-white/50"><span class="lang-ar">الهاتف الأرضي</span><span class="lang-en">Landline</span></h4>
+                <a href="tel:02237434501" class="text-base font-bold hover:text-brand-emerald transition-colors">237434501</a>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div class="p-3 bg-white/10 rounded-xl text-emerald-400 flex-shrink-0">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs text-white/50">WhatsApp</h4>
+                <a href="https://wa.me/201033594888" target="_blank" class="text-lg font-bold hover:text-emerald-400 transition-colors">01033594888</a>
+              </div>
+            </div>
+
+            <!-- Social Networks -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div class="p-3 bg-white/10 rounded-xl text-brand-emerald flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              </div>
+              <div class="space-y-2">
+                <h4 class="text-xs text-white/50"><span class="lang-ar">شبكات التواصل الاجتماعي</span><span class="lang-en">Social Networks</span></h4>
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <!-- Facebook -->
+                  <a href="https://www.facebook.com/share/1Ef61gxMEF/" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-emerald hover:text-white text-slate-200 flex items-center justify-center transition-all">
+                    <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.39-1 1-1h2V2h-3c-2.4 0-4 1.2-4 4v2z"></path></svg>
+                  </a>
+                  <!-- Instagram -->
+                  <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-emerald hover:text-white text-slate-200 flex items-center justify-center transition-all">
+                    <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                  </a>
+                  <!-- TikTok -->
+                  <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-emerald hover:text-white text-slate-200 flex items-center justify-center transition-all">
+                    <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31 0 2.5.43 3.47 1.17.08.06.15.11.22.17V.02h2.51v12.22c0 2.79-2.27 5.06-5.06 5.06-2.79 0-5.06-2.27-5.06-5.06 0-2.61 1.97-4.75 4.51-5.02v2.54c-1.12.25-1.95 1.25-1.95 2.48 0 1.39 1.13 2.52 2.52 2.52 1.39 0 2.52-1.13 2.52-2.52V4.99c.98.67 2.14 1.07 3.39 1.11V3.58c-1.37-.04-2.61-.63-3.52-1.56V.02h-3.05v3.13C12.44 1.21 12.49.02 12.525.02z"></path></svg>
+                  </a>
+                  <!-- X (Twitter) -->
+                  <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-emerald hover:text-white text-slate-200 flex items-center justify-center transition-all">
+                    <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div class="p-3 bg-white/10 rounded-xl text-brand-emerald flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs text-white/50"><span class="lang-ar">الدعم التجاري</span><span class="lang-en">Corporate Email</span></h4>
+                <a href="mailto:info@ecoshield-eg.com" class="text-base font-bold hover:text-brand-emerald transition-colors">info@ecoshield-eg.com</a>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div class="p-3 bg-white/10 rounded-xl text-brand-emerald flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs text-white/50"><span class="lang-ar">المقر الإداري</span><span class="lang-en">Headquarters Address</span></h4>
+                <p class="text-sm font-semibold text-slate-200">
+                  <span class="lang-ar">برج ب، مجمع بولي سكويرز، التجمع الخامس، القاهرة، مصر</span>
+                  <span class="lang-en">Building B, Poly Squares Complex, New Cairo, Egypt</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div class="p-3 bg-white/10 rounded-xl text-brand-emerald flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs text-white/50"><span class="lang-ar">ساعات العمل</span><span class="lang-en">Operations & Audit Hours</span></h4>
+                <p class="text-sm font-semibold text-slate-200">
+                  <span class="lang-ar">فريق المعالجة: 24/7 طوال الأسبوع. الدعم: 8:00 ص - 10:00 م</span>
+                  <span class="lang-en">Operations: 24/7 emergency dispatch. Support: 8:00 AM - 10:00 PM</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Maps Placeholder -->
+          <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-100 h-64 bg-slate-200 relative">
+            <!-- Simulated Google Map for premium design -->
+            <iframe class="w-full h-full border-none filter grayscale opacity-85" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110543.123456789!2d31.4287!3d30.0168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583d7a8d80f8db%3A0x63351ec85c18ec62!2sNew%20Cairo%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1782666500000!5m2!1sen!2seg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --- DEDICATED INSECT INSIGHTS SECTION (تعرف على الحشرة) --- -->
+  <section class="py-24 bg-white relative overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center space-x-2 rtl:space-x-reverse bg-brand-emerald/10 text-brand-emerald px-4 py-1.5 rounded-full text-xs font-bold mb-4">
+          <span class="lang-ar">دليل الحشرات الميداني</span>
+          <span class="lang-en">Pest Field Directory</span>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-black text-brand-deep mb-4">
+          <span class="lang-ar">تعرف على الحشرة ومدى خطورتها</span>
+          <span class="lang-en">Know Your Pests & Their Threat Levels</span>
+        </h2>
+        <div class="w-20 h-1.5 bg-brand-emerald mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+          <span class="lang-ar">دليل متكامل لمساعدتك في التعرف على الحشرات الشائعة في مصر، وتحديد مستوى خطورتها، ومواسم تكاثرها، وأماكن اختبائها.</span>
+          <span class="lang-en">An interactive reference directory to help you identify common Egyptian household pests, their clinical risks, and seasonal peaks.</span>
+        </p>
+      </div>
+
+      <!-- Large Interactive Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Card 1: Bed Bug -->
+        <div class="group bg-brand-light rounded-3xl overflow-hidden border border-slate-100 flex flex-col sm:flex-row shadow-lg hover-lift transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="sm:w-2/5 h-48 sm:h-auto overflow-hidden relative">
+            <img src="assets/pest_bedbug.png" alt="Bed Bugs" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-brand-deep">
+                  <span class="lang-ar">بق الفراش</span><span class="lang-en">Bed Bugs</span>
+                </h3>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-100 text-red-800">
+                  <span class="lang-ar">الخطورة: عالي جداً</span><span class="lang-en">Risk: Extreme</span>
+                </span>
+              </div>
+              <div class="space-y-2 text-xs text-slate-500 leading-relaxed mb-4">
+                <div>
+                  <strong><span class="lang-ar">الأماكن المفضلة:</span><span class="lang-en">Common Locations:</span></strong>
+                  <span class="lang-ar">المراتب، شقوق الأسرة، الزوايا الخشبية المظلمة.</span>
+                  <span class="lang-en">Mattresses, wooden bedframes, deep wall crevices.</span>
+                </div>
+                <div>
+                  <strong><span class="lang-ar">موسم الانتشار:</span><span class="lang-en">Peak Season:</span></strong>
+                  <span class="lang-ar">الصيف والخريف (درجات الحرارة المرتفعة).</span>
+                  <span class="lang-en">Summer & Autumn (high ambient humidity).</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-end pt-4 border-t border-slate-100">
+              <a href="pest-bedbugs.html" class="px-4 py-2 rounded-xl bg-brand-deep hover:bg-brand-emerald text-white text-xs font-bold transition-all duration-300">
+                <span class="lang-ar">اعرف أكثر</span><span class="lang-en">Know More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Cockroach -->
+        <div class="group bg-brand-light rounded-3xl overflow-hidden border border-slate-100 flex flex-col sm:flex-row shadow-lg hover-lift transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="sm:w-2/5 h-48 sm:h-auto overflow-hidden relative">
+            <img src="assets/pest_cockroach.png" alt="Cockroaches" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-brand-deep">
+                  <span class="lang-ar">الصراصير</span><span class="lang-en">Cockroaches</span>
+                </h3>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-100 text-red-800">
+                  <span class="lang-ar">الخطورة: عالي</span><span class="lang-en">Risk: High</span>
+                </span>
+              </div>
+              <div class="space-y-2 text-xs text-slate-500 leading-relaxed mb-4">
+                <div>
+                  <strong><span class="lang-ar">الأماكن المفضلة:</span><span class="lang-en">Common Locations:</span></strong>
+                  <span class="lang-ar">خلف المطابخ، شبكات الصرف، بالوعات الصرف الصحي.</span>
+                  <span class="lang-en">Kitchen cabinets, sewer mains, plumbing lines.</span>
+                </div>
+                <div>
+                  <strong><span class="lang-ar">موسم الانتشار:</span><span class="lang-en">Peak Season:</span></strong>
+                  <span class="lang-ar">الربيع والصيف (ينشط في الرطوبة العالية).</span>
+                  <span class="lang-en">Spring & Summer (moisture dependent).</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-end pt-4 border-t border-slate-100">
+              <a href="pest-cockroaches.html" class="px-4 py-2 rounded-xl bg-brand-deep hover:bg-brand-emerald text-white text-xs font-bold transition-all duration-300">
+                <span class="lang-ar">اعرف أكثر</span><span class="lang-en">Know More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Termite -->
+        <div class="group bg-brand-light rounded-3xl overflow-hidden border border-slate-100 flex flex-col sm:flex-row shadow-lg hover-lift transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="sm:w-2/5 h-48 sm:h-auto overflow-hidden relative">
+            <img src="assets/النمل الابيض.jpg" alt="Termites" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-brand-deep">
+                  <span class="lang-ar">النمل الأبيض</span><span class="lang-en">Termites</span>
+                </h3>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-100 text-red-800">
+                  <span class="lang-ar">الخطورة: كارثي</span><span class="lang-en">Risk: Catastrophic</span>
+                </span>
+              </div>
+              <div class="space-y-2 text-xs text-slate-500 leading-relaxed mb-4">
+                <div>
+                  <strong><span class="lang-ar">الأماكن المفضلة:</span><span class="lang-en">Common Locations:</span></strong>
+                  <span class="lang-ar">الأساسات الترابية، هياكل الباركيه، حلوق الأبواب الخشبية.</span>
+                  <span class="lang-en">Underground foundations, wooden frames, subflooring.</span>
+                </div>
+                <div>
+                  <strong><span class="lang-ar">موسم الانتشار:</span><span class="lang-en">Peak Season:</span></strong>
+                  <span class="lang-ar">طوال العام (ينشط تحت التربة باستمرار).</span>
+                  <span class="lang-en">Year-round subterranean activity.</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-end pt-4 border-t border-slate-100">
+              <a href="pest-termites.html" class="px-4 py-2 rounded-xl bg-brand-deep hover:bg-brand-emerald text-white text-xs font-bold transition-all duration-300">
+                <span class="lang-ar">اعرف أكثر</span><span class="lang-en">Know More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Rodents -->
+        <div class="group bg-brand-light rounded-3xl overflow-hidden border border-slate-100 flex flex-col sm:flex-row shadow-lg hover-lift transition-all duration-500 text-right rtl:text-right ltr:text-left">
+          <div class="sm:w-2/5 h-48 sm:h-auto overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&q=80&w=800" alt="Rodents" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-brand-deep">
+                  <span class="lang-ar">القوارض</span><span class="lang-en">Rodents</span>
+                </h3>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">
+                  <span class="lang-ar">الخطورة: عالي</span><span class="lang-en">Risk: High</span>
+                </span>
+              </div>
+              <div class="space-y-2 text-xs text-slate-500 leading-relaxed mb-4">
+                <div>
+                  <strong><span class="lang-ar">الأماكن المفضلة:</span><span class="lang-en">Common Locations:</span></strong>
+                  <span class="lang-ar">مستودعات الأغذية، فجوات الأسقف المعلقة، الحدائق.</span>
+                  <span class="lang-en">Storage rooms, ceiling voids, landscaping rings.</span>
+                </div>
+                <div>
+                  <strong><span class="lang-ar">موسم الانتشار:</span><span class="lang-en">Peak Season:</span></strong>
+                  <span class="lang-ar">الخريف والشتاء (يبحث عن الدفء في الداخل).</span>
+                  <span class="lang-en">Autumn & Winter (nesting indoors for warmth).</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-end pt-4 border-t border-slate-100">
+              <a href="pest-rodents.html" class="px-4 py-2 rounded-xl bg-brand-deep hover:bg-brand-emerald text-white text-xs font-bold transition-all duration-300">
+                <span class="lang-ar">اعرف أكثر</span><span class="lang-en">Know More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --- 10. FOOTER --- -->
+  <footer class="bg-brand-charcoal text-white pt-20 pb-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16 text-right rtl:text-right ltr:text-left">
+      
+      <!-- Brand & Description -->
+      <div class="lg:col-span-4 space-y-6">
+        <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse justify-start">
+          <img src="assets/logo.jpg" alt="Logo" class="w-12 h-12 object-contain rounded-lg shadow-md border border-white/20">
+          <span class="text-sm md:text-base font-bold tracking-tight text-white leading-tight">
+            <span class="lang-ar block">الشركة الألمانية<br><span class="text-[10px] md:text-xs font-semibold text-white/80">لمكافحة الحشرات والقوارض</span></span>
+            <span class="lang-en block">German Company<br><span class="text-[10px] md:text-xs font-semibold text-white/80">for Pest Control</span></span>
+          </span>
+        </a>
+        <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+          <span class="lang-ar">الشركة الألمانية لمكافحة الحشرات والقوارض شريك مصر الموثوق للتطهير الطبي والبيئي الشامل ومكافحة الآفات المستعصية للفنادق الفاخرة والمستشفيات والمجمعات السكنية والمنازل.</span>
+          <span class="lang-en">The German Company for Pest Control, Egypt's premier specialized agency for medical-grade sanitations and custom pest control contracts catering to high-end real estate, clinics, and hospitality.</span>
+        </p>
+        
+        <!-- Social Media Icons (SVGs) -->
+        <div class="flex items-center space-x-4 rtl:space-x-reverse justify-start">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/share/1Ef61gxMEF/" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-emerald hover:text-white text-slate-400 flex items-center justify-center transition-all">
+            <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.39-1 1-1h2V2h-3c-2.4 0-4 1.2-4 4v2z"></path></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/4_german_company_?igsh=OW53OTBzZ2hwdzZv" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-emerald hover:text-white text-slate-400 flex items-center justify-center transition-all">
+            <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@germancompany4?_r=1&_t=ZS-97ay7vejVmj" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-emerald hover:text-white text-slate-400 flex items-center justify-center transition-all">
+            <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31 0 2.5.43 3.47 1.17.08.06.15.11.22.17V.02h2.51v12.22c0 2.79-2.27 5.06-5.06 5.06-2.79 0-5.06-2.27-5.06-5.06 0-2.61 1.97-4.75 4.51-5.02v2.54c-1.12.25-1.95 1.25-1.95 2.48 0 1.39 1.13 2.52 2.52 2.52 1.39 0 2.52-1.13 2.52-2.52V4.99c.98.67 2.14 1.07 3.39 1.11V3.58c-1.37-.04-2.61-.63-3.52-1.56V.02h-3.05v3.13C12.44 1.21 12.49.02 12.525.02z"></path></svg>
+          </a>
+          <!-- X -->
+          <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-emerald hover:text-white text-slate-400 flex items-center justify-center transition-all">
+            <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="lg:col-span-2 lg:col-start-6 space-y-4">
+        <h4 class="text-sm font-bold text-slate-200">
+          <span class="lang-ar">روابط سريعة</span><span class="lang-en">Quick Links</span>
+        </h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li><a href="#about" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">من نحن</span><span class="lang-en">About Us</span></a></li>
+          <li><a href="#services" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">خدماتنا</span><span class="lang-en">Our Services</span></a></li>
+          <li><a href="#work" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">كيف نعمل</span><span class="lang-en">Our Process</span></a></li>
+          <li><a href="#comparison" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">المقارنات</span><span class="lang-en">Case Studies</span></a></li>
+          <li><a href="#faq" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ Portal</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Services List -->
+      <div class="lg:col-span-3 space-y-4">
+        <h4 class="text-sm font-bold text-slate-200">
+          <span class="lang-ar">برامج المكافحة</span><span class="lang-en">Control Programs</span>
+        </h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li><a href="#services" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">إبادة بق الفراش</span><span class="lang-en">Bed Bug Treatments</span></a></li>
+          <li><a href="#services" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">إبادة الصراصير الألمانية</span><span class="lang-en">German Cockroach Control</span></a></li>
+          <li><a href="#services" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">مكافحة النمل الأبيض والأساسات</span><span class="lang-en">Termite Soil Barriers</span></a></li>
+          <li><a href="#services" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">طرد الثعابين والزواحف بالفلل</span><span class="lang-en">Reptile Exclusion Systems</span></a></li>
+          <li><a href="#services" class="hover:text-brand-emerald transition-colors"><span class="lang-ar">التعقيم الطبي الشامل للمؤسسات</span><span class="lang-en">Medical-Grade Disinfections</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Corporate contact -->
+      <div class="lg:col-span-3 space-y-4">
+        <h4 class="text-sm font-bold text-slate-200">
+          <span class="lang-ar">الاتصال والإدارة</span><span class="lang-en">Administration</span>
+        </h4>
+        <ul class="space-y-3 text-xs text-slate-400">
+          <li>
+            <div class="text-[10px] text-slate-500 uppercase tracking-widest"><span class="lang-ar">أرقام الاتصال (24/7)</span><span class="lang-en">Contact Numbers (24/7)</span></div>
+            <div class="flex flex-col space-y-1 mt-1">
+              <a href="tel:01050021099" class="text-sm font-bold text-slate-200 hover:text-brand-emerald transition-colors">01050021099</a>
+              <a href="tel:01210005539" class="text-sm font-bold text-slate-200 hover:text-brand-emerald transition-colors">01210005539</a>
+              <a href="tel:01110633368" class="text-sm font-bold text-slate-200 hover:text-brand-emerald transition-colors">01110633368</a>
+              <!-- 01033594888 is strictly for WhatsApp as requested -->
+              <a href="tel:02237434501" class="text-xs text-slate-300 hover:text-brand-emerald transition-colors">أرضي: 237434501</a>
+            </div>
+          </li>
+          <li>
+            <div class="text-[10px] text-slate-500 uppercase tracking-widest"><span class="lang-ar">المراسلات التجارية</span><span class="lang-en">Commercial Inquiries</span></div>
+            <a href="mailto:info@ecoshield-eg.com" class="text-slate-200 hover:text-brand-emerald transition-colors">info@ecoshield-eg.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Divider & Copyright -->
+    <div class="max-w-7xl mx-auto px-6 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+      <div>
+        <span class="lang-ar">© 2026 الشركة الألمانية لمكافحة الحشرات والقوارض لمكافحة الآفات والتعقيم. جميع الحقوق محفوظة.</span>
+        <span class="lang-en">© 2026 The German Company for Pest Control. All corporate rights reserved.</span>
+      </div>
+      <div class="flex items-center space-x-6 rtl:space-x-reverse mt-4 md:mt-0">
+        <a href="#" class="hover:text-white transition-colors"><span class="lang-ar">سياسة الخصوصية</span><span class="lang-en">Privacy Policy</span></a>
+        <a href="#" class="hover:text-white transition-colors"><span class="lang-ar">شروط الخدمة والضمان</span><span class="lang-en">Terms of Warranty</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Javascript -->
+  <script src="app.js"></script>
+</body>
+</html>
