@@ -84,37 +84,42 @@
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
+      <!-- Mobile Menu Button & Language Toggle -->
+      <div class="md:hidden flex items-center space-x-3 rtl:space-x-reverse">
+        <button id="lang-toggle-mobile" class="flex items-center justify-center gap-2 p-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 rounded-xl text-white focus:outline-none transition-all" aria-label="Toggle Language">
+          <svg class="w-5 h-5 text-brand-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+          <span class="hidden sm:inline">English</span>
+        </button>
+        <button id="mobile-menu-btn" class="flex items-center justify-center p-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 rounded-xl text-white focus:outline-none transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mx-6 mt-2 bg-brand-charcoal/95 border border-white/10 rounded-2xl flex-col p-6 space-y-4 shadow-xl z-50 backdrop-blur-lg">
-      <a href="#about" class="text-white hover:text-brand-emerald font-semibold text-sm">
-        <span class="lang-ar">من نحن</span><span class="lang-en">About Us</span>
-      </a>
-      <a href="#services" class="text-white hover:text-brand-emerald font-semibold text-sm">
-        <span class="lang-ar">خدماتنا</span><span class="lang-en">Services</span>
-      </a>
-      <a href="#work" class="text-white hover:text-brand-emerald font-semibold text-sm">
-        <span class="lang-ar">كيف نعمل</span><span class="lang-en">Process</span>
-      </a>
-      <a href="#comparison" class="text-white hover:text-brand-emerald font-semibold text-sm">
-        <span class="lang-ar">قبل وبعد</span><span class="lang-en">Before/After</span>
-      </a>
-      <a href="#faq" class="text-white hover:text-brand-emerald font-semibold text-sm">
-        <span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span>
-      </a>
-      <hr class="border-white/10 my-2">
-      <div class="flex flex-col space-y-3">
-        <button id="lang-toggle-mobile" class="w-full py-2.5 border border-white/20 text-white rounded-xl hover:border-brand-emerald text-sm font-bold transition-all">
-          English
-        </button>
-        <a href="#contact" class="w-full text-center py-2.5 bg-brand-emerald text-white font-bold text-sm rounded-xl shadow-lg">
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mx-4 mt-4 bg-white border border-slate-100 rounded-3xl flex-col shadow-2xl z-50 overflow-hidden transform origin-top transition-all duration-300">
+      
+      <div class="flex flex-col p-3 space-y-1">
+        <a href="#about" class="block px-4 py-3.5 text-brand-deep hover:bg-brand-emerald/10 hover:text-brand-emerald rounded-xl font-bold text-sm transition-all rtl:text-right ltr:text-left">
+          <span class="lang-ar">من نحن</span><span class="lang-en">About Us</span>
+        </a>
+        <a href="#services" class="block px-4 py-3.5 text-brand-deep hover:bg-brand-emerald/10 hover:text-brand-emerald rounded-xl font-bold text-sm transition-all rtl:text-right ltr:text-left">
+          <span class="lang-ar">خدماتنا</span><span class="lang-en">Services</span>
+        </a>
+        <a href="#work" class="block px-4 py-3.5 text-brand-deep hover:bg-brand-emerald/10 hover:text-brand-emerald rounded-xl font-bold text-sm transition-all rtl:text-right ltr:text-left">
+          <span class="lang-ar">كيف نعمل</span><span class="lang-en">Process</span>
+        </a>
+        <a href="#comparison" class="block px-4 py-3.5 text-brand-deep hover:bg-brand-emerald/10 hover:text-brand-emerald rounded-xl font-bold text-sm transition-all rtl:text-right ltr:text-left">
+          <span class="lang-ar">قبل وبعد</span><span class="lang-en">Before/After</span>
+        </a>
+        <a href="#faq" class="block px-4 py-3.5 text-brand-deep hover:bg-brand-emerald/10 hover:text-brand-emerald rounded-xl font-bold text-sm transition-all rtl:text-right ltr:text-left">
+          <span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span>
+        </a>
+      </div>
+
+      <div class="bg-slate-50 p-4 border-t border-slate-100 flex flex-col space-y-3">
+        <a href="#contact" class="w-full flex items-center justify-center py-3.5 bg-brand-emerald text-white font-bold text-sm rounded-xl shadow-lg shadow-brand-emerald/30 hover:bg-brand-emerald/90 transition-all">
           <span class="lang-ar">احجز موعداً</span><span class="lang-en">Book Service</span>
         </a>
       </div>

@@ -9,11 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lang === 'ar') {
       document.documentElement.setAttribute('dir', 'rtl');
       if (langToggleBtn) langToggleBtn.innerText = 'English';
-      if (langToggleBtnMobile) langToggleBtnMobile.innerText = 'English';
+      if (langToggleBtnMobile) {
+        const span = langToggleBtnMobile.querySelector('span');
+        if (span) span.innerText = 'English';
+      }
     } else {
       document.documentElement.setAttribute('dir', 'ltr');
       if (langToggleBtn) langToggleBtn.innerText = 'العربية';
-      if (langToggleBtnMobile) langToggleBtnMobile.innerText = 'العربية';
+      if (langToggleBtnMobile) {
+        const span = langToggleBtnMobile.querySelector('span');
+        if (span) span.innerText = 'العربية';
+      }
     }
     // Dispatch resize to trigger animations
     window.dispatchEvent(new Event('resize'));
