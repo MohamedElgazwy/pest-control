@@ -252,13 +252,14 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        // Optionally unobserve after animating once
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.01, rootMargin: '400px 0px 400px 0px' });
 
   revealElements.forEach(el => {
+    // Mark sections as active immediately to avoid delayed blank areas during quick scrolling.
+    el.classList.add('active');
     revealObserver.observe(el);
   });
 

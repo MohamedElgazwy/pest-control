@@ -296,8 +296,10 @@ html[lang="en"] .label-after {
 
 /* Reveal Transitions */
 .reveal {
-  opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Keep sections visible immediately so fast scrolling never shows blank white gaps
+     while JavaScript waits for IntersectionObserver callbacks. */
+  opacity: 1;
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
 }
 
 .reveal-up {
