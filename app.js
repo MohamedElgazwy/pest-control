@@ -40,6 +40,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('ecoshield_lang') || 'ar';
   setLanguage(savedLang);
 
+  // --- WhatsApp Message Prefill ---
+  const whatsAppMessage = 'مرحباً، أحتاج إلى الاستفسار عن خدمات مكافحة الحشرات والتعقيم.';
+  const whatsAppLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com/send"]');
+
+  whatsAppLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    try {
+      const url = new URL(href, window.location.href);
+      if (!url.searchParams.has('text') || !url.searchParams.get('text').trim()) {
+        url.searchParams.set('text', whatsAppMessage);
+        link.setAttribute('href', url.toString());
+      }
+    } catch (error) {
+      const separator = href.includes('?') ? '&' : '?';
+      link.setAttribute('href', `${href}${separator}text=${encodeURIComponent(whatsAppMessage)}`);
+    }
+  });
+
   // --- Mobile Menu Toggle ---
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
